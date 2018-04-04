@@ -15,8 +15,7 @@
       <p>e</p>
     </div>
     <div class="box" id="f">
-      <img src="/home/assets/pic1.jpg" alt="">
-      <p>f</p>
+        {{ message}}
     </div>
     <div class="box" id="g">
       <p>g</p>
@@ -40,7 +39,7 @@ export default {
 
   data() {
       return {
-
+        message: 'Hello'
       }
   }
 }
@@ -50,25 +49,32 @@ export default {
 
 #grid{
   display: grid;
+  background-color: black;
   grid-template-columns: 20% 20% 20% 20% 20%;
   grid-template-rows: 20% 25% 25% 30%;
-  height: calc(100vh - 15px);
-  grid-gap: 5px;
-  width: calc(100% - 20px);
+  height: calc(100vh - 4px);
+  //grid-gap: 5px;
+  width: calc(100% - 4px);
+  border: 2px solid white;
 
 
 }
 .box{
-  background-color: crimson;
+  background: black; //radial-gradient(ellipse at center, #0a2e38 0%, #000000 70%);
+  color: #FFFFFF;
+  text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
+  font-size: 20px;
 }
 
 #a {
     grid-column: span 4;
     grid-row: span 3;
+
   }
 
   #f{
     grid-column: span 2;
+    text-align: center;
   }
 
 </style>

@@ -10,11 +10,13 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 import Auth from './packages/auth/Auth.js'
 import Vuex from 'vuex'
+import VueMqtt from 'vue-mqtt'
+
 
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios);
 axios.defaults.baseURL = "http://localhost:5000/api/v1";
-
+Vue.use(VueMqtt, 'ws://localhost:1883/ws')
 Vue.use(ElementUI)
 Vue.use(VueLocalStorage,{
   name:'ls'

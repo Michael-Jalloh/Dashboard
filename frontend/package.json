@@ -14,11 +14,13 @@
     "@websanova/vue-auth": "^2.21.3-beta",
     "axios": "^0.17.1",
     "element-ui": "^2.1.0",
+    "mqtt": "^2.17.0",
     "vue": "^2.5.2",
     "vue-awesome": "^2.3.4",
     "vue-axios": "^2.0.2",
     "vue-localstorage": "^0.6.1",
     "vue-match-media": "^1.0.2",
+    "vue-mqtt": "^2.0.2",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

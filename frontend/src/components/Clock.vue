@@ -57,6 +57,7 @@ export default {
     text-align: center;
     text-shadow: 0 0 20px rgba(10, 175, 230, 1),  0 0 20px rgba(10, 175, 230, 0);
     height: 100%;
+    border: 0;
 
     .time {
         letter-spacing: 0.05em;

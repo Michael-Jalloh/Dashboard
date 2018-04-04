@@ -14,20 +14,13 @@ Vue.use(Router)
 export default new Router({
   hashbang: false,
   routes: [
-
-    {
-      path: '/',
-      name: 'Home',
-      component: Home,
-
-    },
     {
       path: '/clock',
       name: 'Clock',
       component: Clock,
     },
     {
-      path: '/dashboard',
+      path: '/',
       name: 'Dashboard',
       component: Dashboard,
     },
