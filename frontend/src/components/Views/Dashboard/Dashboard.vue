@@ -29,6 +29,7 @@
 
 <script>
 import Clock from '../../Clock'
+import mqtt from 'mqtt'
 
 export default {
   name: "Dashboard",
@@ -41,6 +42,19 @@ export default {
       return {
         message: 'Hello'
       }
+  },
+
+  created() {
+    this.client = mqtt.connect('mqtt://10.0.0.12:1884');
+
+    this.client.on('connect', function(){
+      alert('Hello');
+      this.client.subscribe('hello');
+    })
+
+    this.client.on('message', function(topic, msg){
+      this.message = message.toString()
+    })
   }
 }
 </script>

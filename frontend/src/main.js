@@ -16,7 +16,6 @@ import VueMqtt from 'vue-mqtt'
 Vue.config.productionTip = false
 Vue.use(VueAxios, axios);
 axios.defaults.baseURL = "http://localhost:5000/api/v1";
-Vue.use(VueMqtt, 'ws://localhost:1883/ws')
 Vue.use(ElementUI)
 Vue.use(VueLocalStorage,{
   name:'ls'
