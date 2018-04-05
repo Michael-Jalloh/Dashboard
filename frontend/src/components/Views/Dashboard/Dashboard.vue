@@ -6,7 +6,7 @@
       <clock></clock>
     </div>
     <div class="box" id="c">
-      <p>c</p>
+      <p><el-button @click="test"> test</el-button></p>
     </div>
     <div class="box" id="d">
       <p>d</p>
@@ -45,16 +45,22 @@ export default {
   },
 
   created() {
-    this.client = mqtt.connect('mqtt://10.0.0.12:1884');
+    this.client = mqtt.connect('mqtt://localhost:1884');
 
     this.client.on('connect', function(){
-      alert('Hello');
-      this.client.subscribe('hello');
+      client.subscribe('hello');
     })
 
     this.client.on('message', function(topic, msg){
       this.message = message.toString()
     })
+  },
+
+  methods: {
+    test(){
+      console.log('testing')
+      this.client.publish('hello',"testing");
+    }
   }
 }
 </script>
